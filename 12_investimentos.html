@@ -4,12 +4,14 @@
     Joãozinho investiu R$ 1.000,00 e o investimento renderá 2% por dia útil. Quantos dias demorará para que Joãozinho consiga o total de R$ 2.000,00.
     */
 
-    //ENTRADA
 
+    let investimento = 1000;
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    for (i = 0; i < investimento; i++) {
+        let dias = (investimento * 0.02)
+        if (dias * i == 2000) {
+            alert(`Para João conseguir R$2000 com a porcentagem de 2% ao dia, levará ` + i + ` dias.`);
+        }
+    }
 
 </script>

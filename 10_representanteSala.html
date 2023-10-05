@@ -4,15 +4,39 @@
     PROBLEMA
     Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
     Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
-    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada nomeCandidato a representante de sala.
     */
 
     //ENTRADA
+    let representante = [];
 
+    let candidato1 = 0;
+    let candidato2 = 0;
+    let candidato3 = 0;
+
+    const eleitores = Number(prompt(`Insira a quantidade de eleitores`))
 
     //PROCESSAMENTO
+    for (candidato = 1; candidato < 4; candidato++) {
 
+        const nomeCandidato = prompt(`Insira o nome de seu candidato` + candidato).toLowerCase();
 
+        representante.push(nomeCandidato);
+
+    }
+    for (v = 0; v < eleitores; v++) {
+        const voto = prompt(`Deseja votar em qual dos candidatos? 1, 2 ou 3?` + representante.join("-")).toLowerCase();
+
+        voto == 1 ? candidato1++ : voto == 2 ? candidato2++ : voto == 3 ? candidato3++ : alert(`Inválido.`)
+    }
+
+    let porcentagem1 = `${representante.splice(0, 1)} obteve uma quantidade de ${candidato1} voto(s), com uma porcentagem de votos de ${Math.round(candidato1 * 100 / eleitores)}%, `;
+
+    let porcentagem2 = `${representante.splice(0, 1)} obteve uma quantidade de ${candidato2} voto(s), com uma porcentagem de votos de ${Math.round(candidato2 * 100 / eleitores)}%, `;
+
+    let porcentagem3 = `e ${representante.splice(0, 1)} obteve uma quantidade de ${candidato3} voto(s), com a porcentagem de votos de ${Math.round(candidato3 * 100 / eleitores)}% `;
+
+    candidato1 > candidato2 && candidato1 > candidato3 ? porcentagem1 = porcentagem1 + ` Foi o vencedor da votação. ` : candidato2 > candidato1 && candidato2 > candidato3 ? porcentagem2 = porcentagem2 + `Foi o vencedor da votação. ` : porcentagem3 = porcentagem3 + ` Foi o vencedor da votação.`
     //SAÍDA
-
+    alert(porcentagem1 + porcentagem2 + porcentagem3);
 </script>

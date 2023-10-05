@@ -5,12 +5,19 @@
     Considere que a população de uma cidade seja de 50000 habitantes, crescendo 1,5% ao ano. Apresente em tela a população prevista para um prazo de 5 anos e um prazo de 10 anos. Apresente os dados em tela.
     */
 
-    //ENTRADA
 
-    
-    //PROCESSAMENTO
-    
+    let populaçao = 50000;
+    for (anos = 1; anos < 11; anos++) {
+        let atual = [anos];
+        if (atual == 5) {
+            let populaçaoPrevista = populaçao + populaçao * (0.015 * atual);
+            alert(`Ao longo de 5 anos esta cidade terá uma população total de ${populaçaoPrevista} habitantes.`);
+        }
+        if (atual == 10) {
+            let populaçaoPrevista = populaçao + populaçao * (0.015 * atual);
+            alert(`Ao longo de 10 anos esta cidade terá uma população total de ${populaçaoPrevista} habitantes.`);
+        }
+    }
 
-    //SAÍDA
 
 </script>

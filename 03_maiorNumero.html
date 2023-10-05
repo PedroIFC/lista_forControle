@@ -6,12 +6,14 @@
     No final, apresente o maior número informado pelo usuário.
     */
 
-    //ENTRADA
 
-    
-    //PROCESSAMENTO
+    let maiorNumero = [];
 
-    
-    //SAÍDA
+    for (let index = 0; index < 5; index++) {
+        const numero = Number(prompt(`Insira um número.`).trim());
+        maiorNumero.push(numero)
+    }
+
+    alert(`${Math.max(...maiorNumero)}.`);
 
 </script>
